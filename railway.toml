@@ -3,10 +3,10 @@ builder = "nixpacks"
 
 [deploy]
 healthcheckPath = "/"
-healthcheckTimeout = 100
+healthcheckTimeout = 300
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
-startCommand = "npm run preview"
+startCommand = "npm start"
 
 [environments.production]
 # Configuração de produção
