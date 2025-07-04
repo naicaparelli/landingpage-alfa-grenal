@@ -7,6 +7,10 @@ export default defineConfig({
     port: 3000,
     open: true
   },
+  preview: {
+    port: process.env.PORT || 4173,
+    host: '0.0.0.0'
+  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
