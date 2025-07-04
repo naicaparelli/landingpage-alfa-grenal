@@ -1,0 +1,20 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+healthcheckPath = "/"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
+
+[environments.production]
+# Configuração de produção
+VITE_API_URL = "https://api.alfasportsbook.com"
+VITE_WS_URL = "wss://ws.alfasportsbook.com"
+VITE_APP_ENV = "production"
+
+[environments.staging]
+# Configuração de staging
+VITE_API_URL = "https://staging-api.alfasportsbook.com"
+VITE_WS_URL = "wss://staging-ws.alfasportsbook.com"
+VITE_APP_ENV = "staging" 
