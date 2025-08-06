@@ -1,6 +1,10 @@
 /* ========================================
    RESET E CONFIGURAÇÕES BÁSICAS
 ======================================== */
+:root {
+  color-scheme: only light;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -318,7 +322,7 @@ body {
 
     .hero-header {
         height: 320px;
-        background-image: url('./assets/images/hero-375.png');
+        background-image: url('./assets/images/hero-3752.png');
         background-position: center top;
         border-radius: 1rem;
         overflow: hidden;
