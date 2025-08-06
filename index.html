@@ -1,39 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Alfa Sportsbook - Biblioteca de componentes React para apostas esportivas com design moderno e responsivo" />
-    <meta name="keywords" content="apostas esportivas, odds, betslip, react, components, sportsbook" />
-    <meta name="author" content="Matheus Frade" />
-    
-    <!-- Preconnect para Google Fonts -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aposte R$30 na dupla Grêmio ou Inter. Se você perder, a Alfa devolve em Aposta Grátis!">
+    <title>Missão Grenal - Alfa Apostas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Meta tags para PWA -->
-    <meta name="theme-color" content="#E5FF00" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Alfa Sportsbook Odds Component Library" />
-    <meta property="og:description" content="Biblioteca profissional de componentes React para apostas esportivas" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://alfa-sportsbook.vercel.app" />
-    <meta property="og:image" content="/og-image.png" />
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Alfa Sportsbook Odds Component Library" />
-    <meta name="twitter:description" content="Biblioteca profissional de componentes React para apostas esportivas" />
-    <meta name="twitter:image" content="/twitter-image.png" />
-    
-    <title>Alfa Sportsbook Odds Component Library</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main-container">
+        <section class="hero-content" aria-labelledby="main-heading">
+            <header class="hero-header">
+                <img class="brand-logo" src="assets/images/logo.png" alt="Logo da Alfa Apostas">
+                
+                <div class="content-wrapper">
+                    <div class="title-section">
+                        <h2 class="sub-heading">Missão</h2>
+                        <h1 id="main-heading" class="main-heading">GRENAL</h1>
+                    </div>
+                    
+                    <div class="description-section">
+                        <h3 class="offer-title">
+                            Aposte <span class="accent-text">R$30</span> no Grêmio ou Inter — se perder, a Alfa te dá outra chance com Aposta Grátis!
+                        </h3>
+                        <p class="terms-text">*Consulte os termos e condições.</p>
+                    </div>
+                </div>    
+                
+                <div class="features-grid" role="list" aria-label="Características da promoção">
+                    <div class="feature-box" role="listitem">
+                        <img src="./assets/icons/Pix.svg" class="icon" aria-hidden="true">
+                        <span class="sr-only">Característica 1:</span>
+                        <div class=box-text>Pague com Pix</div>
+                    </div>
+                    <div class="feature-box" role="listitem">
+                        <img src="./assets/icons/Outcome.svg" class="icon" aria-hidden="true">
+                        <span class="sr-only">Característica 2:</span>
+                        <div class=box-text>Saque rápido</div>
+                    </div>
+                    <div class="feature-box" role="listitem">
+                        <img src="./assets/icons/Shield.svg" class="icon" aria-hidden="true">
+                        <span class="sr-only">Característica 3:</span>
+                        <div class=box-text>Seguro</div>
+                    </div>
+                </div>
+            </header>
+        </section>
+        
+        <aside class="registration-section" aria-labelledby="form-title">
+            <form class="registration-form" novalidate>
+                <h3 id="form-title" class="form-title">Registre-se</h3>
+                
+                <label for="email" class="sr-only">E-mail</label>
+                <input 
+                    id="email" 
+                    class="form-input" 
+                    type="email" 
+                    placeholder="E-mail"
+                    required
+                    autocomplete="email"
+                    aria-describedby="email-error"
+                >
+                
+                <label for="password" class="sr-only">Senha</label>
+                <input 
+                    id="password" 
+                    class="form-input" 
+                    type="password" 
+                    placeholder="Senha"
+                    required
+                    autocomplete="new-password"
+                    minlength="6"
+                    aria-describedby="password-error"
+                >
+                
+                <label for="cpf" class="sr-only">CPF</label>
+                <input 
+                    id="cpf" 
+                    class="form-input" 
+                    type="text" 
+                    placeholder="CPF"
+                    required
+                    pattern="[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}-?[0-9]{2}"
+                    maxlength="14"
+                    autocomplete="off"
+                    aria-describedby="cpf-error"
+                >
+                
+                <fieldset class="input-group">
+                    <legend class="sr-only">Telefone</legend>
+                    <label for="country-code" class="sr-only">Código do país</label>
+                    <input 
+                        id="country-code" 
+                        class="form-input form-input--country" 
+                        type="tel" 
+                        placeholder="+55"
+                        value="+55"
+                        maxlength="4"
+                        autocomplete="tel-country-code"
+                    >
+                    <label for="phone-number" class="sr-only">Número do telefone</label>
+                    <input 
+                        id="phone-number" 
+                        class="form-input form-input--phone" 
+                        type="tel" 
+                        placeholder="Telefone"
+                        required
+                        pattern="[0-9\s\(\)\-]+"
+                        maxlength="15"
+                        autocomplete="tel-national"
+                        aria-describedby="phone-error"
+                    >
+                </fieldset>
+                
+                <label for="referral-code" class="sr-only">Cupom/Código de indicação (Opcional)</label>
+                <input 
+                    id="referral-code" 
+                    class="form-input" 
+                    type="text" 
+                    placeholder="Cupom/Código de indicação (Opcional)"
+                    autocomplete="off"
+                >
+                
+                <p class="disclaimer-text">
+                    Jogos e apostas esportivas envolvem riscos de perdas. Jogue sempre de maneira responsável.
+                </p>
+                
+                <button type="submit" class="submit-button">
+                    REGISTRAR
+                </button>
+            </form>
+        </aside>
+    </main>
+</body>
+</html>
