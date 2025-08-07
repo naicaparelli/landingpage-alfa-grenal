@@ -40,7 +40,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 5vw;
-    gap: 2rem;
 }
 
 .hero-content {
@@ -284,205 +283,61 @@ body {
    MEDIA QUERIES - RESPONSIVIDADE
 ======================================== */
 
-/* Desktop Grande (≥ 1440px) */
-@media (min-width: 1440px) {
-    body {
-        background-image: url('./assets/images/hero-1920.png');
-    }
+/* Desktop ≥ 1920px */
+@media (min-width: 1920px) {
+  body {
+    background-image: url('./assets/images/hero-1920x900.jpg');
+  }
 
-    .hero-header {
-        background-image: none;
-    }
+  .hero-header {
+    background-image: none;
+  }
 }
 
-/* Desktop Médio (1200px – 1439px) */
+/* Desktop ≥ 1440px e < 1920px */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  body {
+    background-image: url('./assets/images/hero-1440x900.jpg');
+  }
+
+  .hero-header {
+    background-image: none;
+  }
+}
+
+/* Tablet / Laptop ≥ 1200px e < 1440px */
 @media (min-width: 1200px) and (max-width: 1439px) {
-    body {
-        background-image: url('./assets/images/hero-1200.png');
-    }
+  body {
+    background-image: url('./assets/images/hero-1200x900.jpg');
+  }
 
-    .hero-header {
-        background-image: none;
-    }
+  .hero-header {
+    background-image: none;
+  }
 }
 
-/* Tablet (768px – 1199px) */
+/* Tablet ≥ 768px e < 1200px */
 @media (min-width: 768px) and (max-width: 1199px) {
-    body {
-        background-image: none;
-    }
+  body {
+    background-image: url('./assets/images/hero-768x900.jpg');
+  }
 
-    .main-container {
-        flex-direction: column;
-        padding: 2rem 3vw;
-        gap: 3rem;
-        min-height: 100vh;
-        justify-content: flex-start;
-    }
+  .hero-header {
+    background-image: none;
+  }
 
-    .hero-header {
-        height: 320px;
-        background-image: url('./assets/images/hero-3752.png');
-        background-position: center top;
-        border-radius: 1rem;
-        overflow: hidden;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    }
-
-    .hero-content {
-        width: 100%;
-        max-width: none;
-        height: auto;
-        justify-content: flex-start;
-        gap: 2rem;
-    }
-
-    .brand-logo {
-        width: 120px;
-        padding: 1.5rem 2rem 0;
-    }
-
-    .content-wrapper {
-        padding: 0 2rem;
-        gap: 1.5rem;
-        margin-top: 1rem;
-    }
-
-    .title-section {
-        margin-bottom: 1.5rem;
-    }
-
-    .main-heading {
-        font-size: clamp(4rem, 8vw, 6rem);
-    }
-
-    .sub-heading {
-        font-size: clamp(2.5rem, 6vw, 4rem);
-    }
-
-    .offer-title {
-        font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-        line-height: 1.5;
-    }
-
-    .description-section {
-        max-width: 100%;
-        gap: 1rem;
-    }
-
-    .features-grid {
-        padding: 1.5rem 2rem 2rem;
-        gap: 1.5rem;
-        justify-content: center;
-    }
-
-    .feature-box {
-        width: 140px;
-        height: 100px;
-        font-size: 1rem;
-        font-weight: 600;
-        padding: 1rem;
-        border-radius: 0.75rem;
-    }
-
-    .registration-section {
-        width: 100%;
-        max-width: none;
-        justify-content: center;
-        padding: 0;
-    }
-
-    .registration-form {
-        max-width: 480px;
-        width: 100%;
-        padding: 2.5rem;
-        gap: 1.25rem;
-        border-radius: 1.5rem;
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    }
-
-    .form-title {
-        font-size: 1.75rem;
-        margin-bottom: 1rem;
-    }
-
-    .form-input {
-        padding: 1rem 1.25rem;
-        font-size: 1.1rem;
-        border-radius: 8px;
-        height: 56px;
-    }
-
-    .form-input::placeholder {
-        font-size: 1rem;
-    }
-
-    .submit-button {
-        height: 56px;
-        font-size: 1.1rem;
-        font-weight: 800;
-        border-radius: 8px;
-        margin-top: 1rem;
-    }
-
-    .disclaimer-text {
-        font-size: 0.875rem;
-        line-height: 1.4;
-        margin: 1rem 0;
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Melhorar hierarquia visual */
-    .accent-text {
-        font-size: 1.1em;
-        text-shadow: 0 0 8px rgba(235, 255, 0, 0.3);
-    }
-
-    .terms-text {
-        font-size: 0.875rem;
-        margin-top: 0.5rem;
-    }
-
-    /* Adicionar breathing room */
-    .input-group {
-        gap: 1rem;
-    }
-
-    .form-input--country {
-        min-width: 90px;
-    }
-
-    /* Melhorar contraste e foco */
-    .form-input:focus {
-        background-color: #2B2B75;
-        border: 1px solid #EBFF00;
-        box-shadow: 0 0 0 3px rgba(235, 255, 0, 0.15);
-    }
-
-    .submit-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(235, 255, 0, 0.4);
-    }
-
-    /* Adicionar animação suave para transição */
-    .hero-header,
-    .registration-form {
-        transition: all 0.3s ease-in-out;
-    }
 }
 
-/* Mobile (≤ 767px) */
+/* Mobile pequeno < 480px */
 @media (max-width: 767px) {
-    body {
+  body {
         background-image: none;
     }
 
     .hero-header {
-        height: 310px;
+        height: auto;
         gap: 0.5rem;
-        background-image: url('./assets/images/hero-375.png');
+        background-image: url('./assets/images/hero-375x500.jpg');
         background-position: center top;
         width: 100vw;
         max-width: none;
@@ -549,31 +404,33 @@ body {
 /* ========================================
    ACESSIBILIDADE E MELHORIAS
 ======================================== */
+
+/* Apenas leitura para leitores de tela */
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-/* Melhor contraste para foco */
+/* Foco visível para acessibilidade */
 *:focus {
-    outline: 1px solid #EBFF00;
-    outline-offset: 0px;
+  outline: 1px solid #EBFF00;
+  outline-offset: 0px;
 }
 
-/* Animações respeitam preferências do usuário */
+/* Reduz animações se o usuário preferir */
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
