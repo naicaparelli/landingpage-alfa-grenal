@@ -310,7 +310,7 @@ body {
 /* Tablet / Laptop ≥ 1200px e < 1440px */
 @media (min-width: 1200px) and (max-width: 1439px) {
   body {
-    background-image: url('./assets/images/hero-1200x900.jpg');
+    background-image: url('./assets/images/hero-900x675.jpg');
   }
 
   .hero-header {
@@ -339,7 +339,7 @@ body {
     .hero-header {
         height: auto;
         gap: 0.5rem;
-        background-image: url('./assets/images/hero-480x500.jpg');
+        background-image: url('./assets/images/hero-480x508.jpg');
         background-position: center top;
         width: 100vw;
         max-width: none;
@@ -414,7 +414,7 @@ body {
     .hero-header {
         height: auto;
         gap: 0.5rem;
-        background-image: url('./assets/images/hero-375x500.jpg');
+        background-image: url('./assets/images/hero-360x508.jpg');
         background-position: center top;
         width: 100vw;
         max-width: none;
